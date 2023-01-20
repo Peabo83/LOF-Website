@@ -62,6 +62,7 @@ $text = file_get_contents('https://docs.google.com/document/d/e/2PACX-1vSlJa7qHD
               echo '<li class="nav-item">
                       <a class="nav-link" aria-current="page" href="'.$url.'">'.$name.'</a>
                     </li>';
+              // If the current department matches the $_GET, set the inital text for $content
               if (isset($_GET['dept']) && strtolower($_GET['dept']) == strtolower($name) ) {
                 $text = file_get_contents( trim($link) );
               }
