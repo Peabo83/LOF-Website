@@ -51,7 +51,7 @@ $menu_explode = json_decode($menu_json);
               $link = $menu_data[2];
 
               if ($url == '' && $name != 'End') {
-                echo '<span class="pt-2 h-100 nav-link active collapsed" data-bs-toggle="collapse" data-bs-target="#'.$name.'-expand" aria-expanded="false" aria-controls="department-expand">' . $name . '</span>
+                echo '<span class="pt-2 h-100 nav-link active collapsed" data-bs-toggle="collapse" data-bs-target="#'.$name.'-expand" aria-expanded="false" aria-controls="department-expand"><span class="d-inline-block submenu"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg></span> ' . $name . '</span>
                 <div id="'.$name.'-expand" class="collapse mt-1 ms-2 sub-menu" style="border-left: 1px solid gray;">';
               } elseif ($name  == 'End') {
                 echo '</div>';
