@@ -6,7 +6,7 @@ I built this on PHP 8.2, bootstrap 5.2 loads from the CDN.
 
 Set /public as the website root
 
-Set website variables in define.php, fount in the root of the build
+Set website variables in define.php, found in the root of the build
 
 /public/do-the-thing.php will load with a text input and a 'GO' button. Enter the password defined in define.php to run the script that caches the pages and images.
 
