@@ -4,3 +4,11 @@ img {
 .sub-menu li {
 	padding-left: 1rem;
 }
+.nav-link.active .submenu {
+    transform: rotate(90deg);
+    position: relative;
+    left: -3px;
+}
+.nav-link.active.collapsed .submenu {
+	transform: unset;
+}
