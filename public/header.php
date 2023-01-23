@@ -49,9 +49,17 @@ $menu_explode = json_decode($menu_json);
               $name = $menu_data[0];
               $url = $menu_data[1];
               $link = $menu_data[2];
-              echo '<li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="'.$url.'">'.$name.'</a>
-                    </li>';
+
+              if ($url == '' && $name != 'End') {
+                echo '<span class="pt-2 h-100 nav-link active collapsed" data-bs-toggle="collapse" data-bs-target="#'.$name.'-expand" aria-expanded="false" aria-controls="department-expand">' . $name . '</span>
+                <div id="'.$name.'-expand" class="collapse mt-1 ms-2 sub-menu" style="border-left: 1px solid gray;">';
+              } elseif ($name  == 'End') {
+                echo '</div>';
+              } else {
+                echo '<li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="'.$url.'">'.$name.'</a>
+                      </li>';
+              }
                     
               // If the current item matches the user's request, set the $content
               if (isset($_GET['dept']) && strtolower($_GET['dept']) == strtolower($name) ) {
